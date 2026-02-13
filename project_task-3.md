@@ -27,8 +27,6 @@ from my_token import TOKEN
 
 bot = telebot.TeleBot(TOKEN)
 
-data = {}
-
 # 2 Учитесь в школе?
 def school_student(message):
     pass

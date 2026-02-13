@@ -14,8 +14,6 @@ from my_token import TOKEN
 
 bot = telebot.TeleBot(TOKEN)
 
-data = {}
-
 # 2 Учитесь в школе?
 def school_student(message):
     markup = telebot.types.InlineKeyboardMarkup()
@@ -34,7 +32,6 @@ def school_class(message):
 
 # 5 Обработка ответа - какой класс
 def school_class_handler(message):
-    data['school_class'] = message.text
     good_sleep(message)
 
 
@@ -59,11 +56,9 @@ def start_command(message):
 @bot.callback_query_handler(func=lambda call: call.data.split('-')[0] == 'school_student')
 def school_student_handler(call):
     reply = call.data.split('-')[1]
-    data['school_student'] = reply
     if reply == 'yes':
         school_class(call.message)
     else:
-        data['school_class'] = ''
         good_sleep(call.message)
         
 
@@ -71,7 +66,6 @@ def school_student_handler(call):
 @bot.callback_query_handler(func=lambda call: call.data.split('-')[0] == 'good_sleep')
 def good_sleep_handler(call):
     reply = call.data.split('-')[1]
-    data['good_sleep'] = reply
     if reply == 'yes':
         # 8 Здорово!
         bot.send_message(call.message.chat.id, 'Здорово!')

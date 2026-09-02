@@ -1,0 +1,1 @@
+# [Конспекты за 7 класс](https://github.com/naleont/study_dg_7)

@@ -1,0 +1,2 @@
+Hello, my name is Little Python!
+Today we're having fun with files!

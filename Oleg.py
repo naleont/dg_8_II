@@ -11,3 +11,9 @@ for symb in text:
         symbols[symb] = 1
 
 print(symbols)
+
+# words = text.split()
+
+# for word in words:
+#     new_word = word.strip('.,?!":;»«— …')
+#     print(new_word)

@@ -1,4 +1,4 @@
-with open('dg_8_II/Oleg.txt', encoding='utf-8') as f:
+with open('Oleg.txt', encoding='utf-8') as f:
     text = f.read()
 
 symbols = {}
